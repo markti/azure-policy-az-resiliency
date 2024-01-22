@@ -1,0 +1,231 @@
+{
+    "properties": {
+      "displayName": "Allow Usage Cost Resources",
+      "policyType": "Custom",
+      "description": "Allow resources to be deployed except MCPP, M365.",
+      "metadata": {
+        "version": "1.0.0",
+        "category": "General"
+      },
+      "Version": "1.0.0",
+      "parameters": {
+        "effect": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "allowedValues": [
+            "Audit",
+            "Deny",
+            "Disabled"
+          ],
+          "defaultValue": "Deny"
+        }
+      },
+      "policyDefinitions": [
+        {
+          "policyDefinitionReferenceId": "Apimanagement_Service_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/42daa904-5969-47ef-92cb-b75df946195a",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Cache_Redis_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1bf67da8-b100-45bf-b89d-e4669fc54411",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Compute_disks_ZoneResilient_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/344ea7ca-2ba8-4d68-859b-317239714b2c",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Compute_virtualMachines_ZoneAligned_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/42f4f3a2-7d20-4c13-a05d-01857a626c22",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Compute_virtualMachineScaleSets_ZoneResilient_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d3903bdf-ab85-4cce-85d3-2934d77629d4",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "ContainerRegistry_registries_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9d2b0a20-57d6-474c-9d12-44a4a20999c6",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "ContainerService_managedclusters_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2dec5f47-bc40-40d1-8c7d-a39d9d6808d1",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "DocumentDB_databaseAccounts_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/44c5a1f9-7ef6-4c38-880c-273e8f7a3c24",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "EventHub_namespaces_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ae243d87-5cf3-4dce-90bd-6d62be328de9",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Kusto_clusters_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cbe58ab0-07a8-43ea-9ccc-8ea33e4d6aa5",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Network_publicipaddresses_ZoneResilient_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/682e4ab9-59fe-4871-9839-265b54c568c4",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Network_publicipprefixes_ZoneResilient_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2dba5c7e-12a4-4be8-b208-f59bc49e88c2",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Network_virtualNetworkGateways_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/da8a2248-6b4a-44a7-96bf-bf1c0dd208c3",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "ServiceBus_namespaces_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d3ee5dcf-0c6d-49ab-aee4-f250583a7bdc",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Servicefabric_Clusters_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/075896de-f4f8-465b-b6d8-9e73725bb62d",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Sql_managedInstances_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0fc92280-604b-4f23-9e04-5ef98d1a28df",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Sql_servers_databases_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6221cac0-bb8d-40f4-9535-5d03f713f054",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Sql_servers_elasticpools_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f16a3ca9-b57a-4392-b660-4c1f8442aa8d",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "Storage_storageAccounts_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/85b005b2-95fc-4953-b9cb-f9ee6427c754",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        },
+        {
+          "policyDefinitionReferenceId": "web_serverfarms_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/22888755-d824-4e43-8e0b-42d481836554",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
+        }
+      ]
+    },
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/FOO",
+    "name": "FOO"
+  }
