@@ -6,10 +6,10 @@
     "description": "Application Gateways can be configured to be either Zone Aligned, Zone Redundant, or neither. Application Gateways that have exactly one entry in their zones array are considered Zone Aligned. In contrast, Application Gateways with 3 or more entries in their zones array and a capacity of at least 3 are recognized as Zone Redundant. This policy helps identify and enforce these resilience configurations.",
     "metadata": {
       "category": "Resilience",
-      "version": "1.0.0-preview",
+      "version": "1.0.0",
       "preview": true
     },
-    "version": "1.0.0-preview",
+    "version": "1.0.0",
     "parameters": {
       "effect": {
         "type": "String",

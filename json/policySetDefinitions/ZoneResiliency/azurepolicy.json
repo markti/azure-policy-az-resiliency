@@ -1,8 +1,8 @@
 {
     "properties": {
-      "displayName": "Allow Usage Cost Resources",
+      "displayName": "Resources should be Zone Resilient",
       "policyType": "Custom",
-      "description": "Allow resources to be deployed except MCPP, M365.",
+      "description": "Resources should be Zone Resilient",
       "metadata": {
         "version": "1.0.0",
         "category": "General"
@@ -223,9 +223,19 @@
               "value": "[parameters('effect')]"
             }
           }
+        },
+        {
+          "policyDefinitionReferenceId": "app_gateway_ZoneRedundant_Audit",
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/42d6cabf-ecf0-4836-9444-b2691809ef99",
+          "definitionVersion": "1.*.*",
+          "parameters": {
+            "effect": {
+              "value": "[parameters('effect')]"
+            }
+          }
         }
       ]
     },
-    "id": "/providers/Microsoft.Authorization/policySetDefinitions/FOO",
-    "name": "FOO"
+    "id": "/providers/Microsoft.Authorization/policySetDefinitions/01e2f9b5-7e42-4bd8-bd7d-210b084a56e8",
+    "name": "01e2f9b5-7e42-4bd8-bd7d-210b084a56e8"
   }
