@@ -226,7 +226,7 @@
         },
         {
           "policyDefinitionReferenceId": "app_gateway_ZoneRedundant_Audit",
-          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/42d6cabf-ecf0-4836-9444-b2691809ef99",
+          "policyDefinitionId": "/subscriptions/FOO/providers/Microsoft.Authorization/policyDefinitions/42d6cabf-ecf0-4836-9444-b2691809ef99",
           "definitionVersion": "1.*.*",
           "parameters": {
             "effect": {
